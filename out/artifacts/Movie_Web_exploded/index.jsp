@@ -1,0 +1,173 @@
+<%@ page pageEncoding="utf-8" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <link rel="stylesheet" href="css/ad.css"/>
+    <script type="text/javascript" src="js/jquery-1.6.1.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            var len = $(".num>li").length;
+            var index = 0;
+
+            $(".num li").mouseover(function () {
+                index = $(".num li").index(this);
+                showImg(index);
+            });
+        });
+
+
+        function showImg(index) {
+            var adHeight = $(".ad").height();
+
+            $(".slider").stop(true, true).animate({top: -adHeight * index - 16}, 500);
+            $(".num li").removeClass("on").eq(index).addClass("on");
+        }
+    </script>
+
+</head>
+
+<body>
+<div id="top">
+    <ul>
+        <li><a href="#">我的订单</a></li>
+        <li><a href="#">最近浏览</a></li>
+        <li><a href="#">购物车</a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">注册</a></li>
+    </ul>
+</div>
+<div id="nav">
+    <img src="images\web\trdy.gif" width="200" height="100"/>
+    <input type="text" id="ss_txt"/>
+    <input type="button" id="ss_btn" value="搜索"/>
+    <div class="ad">
+        <ul class="slider">
+            <li><img src="images/ad/look_dxlxj.jpg"/></li>
+            <li><img src="images/ad/look_dzd.jpg"/></li>
+            <li><img src="images/ad/look_gwdyj.jpg"/></li>
+            <li><img src="images/ad/look_zm.jpg"/></li>
+        </ul>
+
+        <ul class="num">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+
+</div>
+<div id="mid_left">
+    <ul id="year">
+        <li>【年代】:</li>
+        <li><a href="#">全部</a></li>
+        <li><a href="#">1960-1970</a></li>
+        <li><a href="#">1971-1980</a></li>
+        <li><a href="#">1981-1990</a></li>
+        <li><a href="#">1991-2010</a></li>
+        <li><a href="#">2011-2017</a></li>
+    </ul>
+    <br/>
+    <ul id="type">
+        <li>【类型】:</li>
+        <li><a href="#">全部</a></li>
+        <li><a href="#">爱情</a></li>
+        <li><a href="#">动作</a></li>
+        <li><a href="#">科幻</a></li>
+        <li><a href="#">喜剧</a></li>
+        <li><a href="#">惊悚</a></li>
+        <li><a href="#">剧情</a></li>
+        <li><a href="#">冒险</a></li>
+        <li><a href="#">动画</a></li>
+    </ul>
+    <br/>
+    <ul id="edition_name">
+        <li>【版本】:</li>
+        <li><a href="#">全部</a></li>
+        <li><a href="#">IMAX</a></li>
+        <li><a href="#">2D</a></li>
+        <li><a href="#">3D</a></li>
+    </ul>
+    <br/>
+</div>
+<div id="mid_right">
+    <dl>
+        <dt><img src="images/film/bfxqz3.jpg"/></dt>
+        <dd><a href="#">等待审判</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/cjyzm.jpg"/></dt>
+        <dd><a href="#">春娇与志明</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/czjt.jpg"/></dt>
+        <dd><a href="#">车在囧途</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/fczlm.jpg"/></dt>
+        <dd><a href="#">复仇者联盟</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/fylry.jpg"/></dt>
+        <dd><a href="#">飞跃老人院</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/hjdja.jpg"/></dt>
+        <dd><a href="#">黄金大劫案</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/hp2.jpg"/></dt>
+        <dd><a href="#">画皮二</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/hyr3.jpg"/></dt>
+        <dd><a href="#">黑衣人三</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/jeyx.jpg"/></dt>
+        <dd><a href="#">饥饿游戏</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/lhzc2.jpg"/></dt>
+        <dd><a href="#">灵魂战车二</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/mamxd.jpg"/></dt>
+        <dd><a href="#">迈阿密行动</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/mdjsj3.jpg"/></dt>
+        <dd><a href="#">马达加斯加三</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/nyxd.jpg"/></dt>
+        <dd><a href="#">纽约行动</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/plwsjhj.jpg"/></dt>
+        <dd><a href="#">普罗旺斯惊魂记</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/qtzdy2.jpg"/></dt>
+        <dd><a href="#">潜艇总动员2</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/rad.jpg"/></dt>
+        <dd><a href="#">rad</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/rldz.jpg"/></dt>
+        <dd><a href="#">人狼大战</a></dd>
+    </dl>
+    <dl>
+        <dt><img src="images/film/sghqs.jpg"/></dt>
+        <dd><a href="#">三个火枪手</a></dd>
+    </dl>
+</div>
+<div id="foot"></div>
+</body>
+</html>
